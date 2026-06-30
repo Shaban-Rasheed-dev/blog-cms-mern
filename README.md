@@ -23,13 +23,32 @@ A full-stack Content Management System (CMS) blog application built with **Node.
 - **AI Integration:** Ollama Cloud API
 - **Architecture:** MVC (Model-View-Controller)
 
-## Screenshots
+## AI Integration (Ollama)
 
-> Add screenshots here after taking them
+This project uses **Ollama** (running locally) for AI-powered post summarization, using the `llama3.2:latest` model.
 
-![Dashboard](./screenshots/dashboard.png)
-![All Posts](./screenshots/allposts.png)
-![Add Post](./screenshots/addpost.png)
+### Installing Ollama Locally
+
+1. Download and install Ollama from [ollama.com/download](https://ollama.com/download) (available for Windows, Mac, and Linux)
+
+2. After installation, pull the required model:
+```bash
+   ollama pull llama3.2:latest
+```
+
+3. Run Ollama (it usually starts automatically as a background service, but you can also start it manually):
+```bash
+   ollama serve
+```
+
+4. Verify it's running by visiting `http://localhost:11434` in your browser — you should see "Ollama is running"
+
+5. Make sure your `.env` file points to the local Ollama endpoint (check `.env.example` for the exact variable name)
+
+### Notes
+- Ollama must be running locally for the AI summarization feature to work
+- The first request to the model may take longer as it loads into memory
+- Minimum 8GB RAM recommended for running `llama3.2` smoothly
 
 ## Getting Started
 
@@ -37,7 +56,7 @@ A full-stack Content Management System (CMS) blog application built with **Node.
 
 - Node.js installed
 - MongoDB (local or [MongoDB Atlas](https://www.mongodb.com/atlas))
-- Ollama Cloud API key
+- Ollama local setup
 
 ### Installation
 
