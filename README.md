@@ -5,9 +5,10 @@ A full-stack Content Management System (CMS) blog application built with **Node.
 ## Features
 
 - 📝 Create, edit, delete, and publish blog posts
-- 🤖 AI-powered post summarization using Ollama Cloud API
-- 🔐 Admin authentication (JWT/Session-based login)
-- 📊 Admin dashboard with post statistics and charts
+- 🤖 AI-powered post summarization using Ollama (local LLM - llama3.2)
+- 🔐 Admin authentication with Register/Login (JWT/Session-based)
+- 🔒 Protected routes for admin panel
+- 📊 Admin dashboard with post statistics
 - 🔍 Search functionality for posts
 - 📄 Pagination for post listings
 - 🖼️ Image upload support for posts
@@ -20,7 +21,7 @@ A full-stack Content Management System (CMS) blog application built with **Node.
 - **Database:** MongoDB, Mongoose
 - **View Engine:** EJS
 - **Authentication:** JWT / Session-based
-- **AI Integration:** Ollama Cloud API
+- **AI Integration:** Ollama local setup
 - **Architecture:** MVC (Model-View-Controller)
 
 ## AI Integration (Ollama)
