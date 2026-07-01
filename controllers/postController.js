@@ -96,7 +96,7 @@ export const updatePost = async (req, res) => {
         message: "All fields are required",
       });
     }
-    // ✅ nai image aayi? use karo. nahi aayi? purani rakho
+
     const image = req.file
       ? `/uploads/${req.file.filename}`
       : req.body.existingImage;
